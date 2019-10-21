@@ -18,7 +18,6 @@ import net.paragon.entity.Car;
 import net.paragon.msp.infra.model.Filter;
 import net.paragon.msp.service.CarService;
 import net.paragon.msp.util.Utils;
-import net.paragon.utility.ListUtility;
 
 /**
  * Created by rmpestano on 12/02/17.
@@ -50,9 +49,6 @@ public class CarListMB implements Serializable {
 
     @PostConstruct
     public void initDataModel() {
-    	List<String> simpleList = ListUtility.createArrayList();
-    	System.out.println(simpleList);
-    	System.out.println("Initialize data model .................");
         cars = new LazyDataModel<Car>() {
             @Override
             public List<Car> load(int first, int pageSize,
@@ -82,7 +78,6 @@ public class CarListMB implements Serializable {
                 return carService.findById(new Integer(key));
             }
         };
-      	System.out.println(".................Done.................");
     }
 
     public void clear() {

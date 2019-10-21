@@ -8,54 +8,19 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>pmsp-ctdmx</artifactId>
+    <artifactId>pmsp-ctdmx-core</artifactId>
     <packaging>jar</packaging>
     <version>0.1</version>
-    <name>PMSP - Clinical Trial and Data Management</name>
+    <name>PMSP - Clinical Trial and Data Management Core</name>
     <description>Module that contains all services for clinical trial and data management in the project. </description>
 
 	<dependencies>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>pmsp-ctdmx-core</artifactId>
+			<artifactId>pmsp-domain</artifactId>
 			<version>${project.version}</version>
 		</dependency>	
-<!--
-    <dependency>
-	    <groupId>org.primefaces</groupId>
-	    <artifactId>primefaces</artifactId>
-    </dependency>
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>4.0.0</version>
-			<scope>provided</scope>
-		</dependency>
 
-		<dependency>
-			<groupId>javax.faces</groupId>
-			<artifactId>javax.faces-api</artifactId>
-			<version>2.3</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.glassfish</groupId>
-			<artifactId>javax.faces</artifactId>
-			<version>2.3.3</version>
-		</dependency>
-
-		<dependency>
-			<groupId>jstl</groupId>
-			<artifactId>jstl</artifactId>
-			<version>1.2</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.jboss.weld.servlet</groupId>
-			<artifactId>weld-servlet</artifactId>
-			<version>2.4.5.Final</version>
-		</dependency>    
--->
     <dependency>
 			<groupId>joda-time</groupId>
 			<artifactId>joda-time</artifactId>

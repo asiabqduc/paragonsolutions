@@ -56,6 +56,7 @@
 			<module>pmsp-core</module>
 			<module>pmsp-domain</module>
 			<module>pmsp-manager</module>
+			<module>pmsp-ctdmx-core</module>
 			<module>pmsp-ctdmx</module>
 			<module>pmsp-emx</module>
 			<module>pmsp-web-admin</module>

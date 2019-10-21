@@ -27,6 +27,7 @@ import org.springframework.context.annotation.Import;
 import net.paragon.entity.Car;
 import net.paragon.msp.config.BaseConfiguration;
 import net.paragon.msp.config.SecurityConfig;
+import net.paragon.msp.config.SpringInternationalizationConfig;
 import net.paragon.msp.util.Utils;
 
 /**
@@ -34,7 +35,8 @@ import net.paragon.msp.util.Utils;
  */
 @Import(value = { 
 		BaseConfiguration.class, 
-		SecurityConfig.class})
+		SecurityConfig.class, 
+		SpringInternationalizationConfig.class})
 @SpringBootApplication
 public class AdminBootApplication {
 	@Inject
