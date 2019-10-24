@@ -4,10 +4,9 @@ import java.io.Serializable;
 
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
-import javax.persistence.Table;
 
 @Entity
-@Table(name = "ctmx_Employee")
+//@Table(name = "ctmx_Employee")
 @DiscriminatorValue("pharmacist")
 public class Pharmatiest extends Employee implements Serializable {
 

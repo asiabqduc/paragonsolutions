@@ -25,10 +25,15 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
+
 @Entity
-@Table(name = "ctmx_Employee")
+@Table(name = "ctmx_employee")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "type", discriminatorType = DiscriminatorType.STRING)
+@DiscriminatorColumn(name = "t_type", discriminatorType = DiscriminatorType.STRING)
 @DiscriminatorValue(value = "Admin")
 public class Employee implements java.io.Serializable {
 
@@ -42,7 +47,7 @@ public class Employee implements java.io.Serializable {
 	@Column(name = "employeeId")
 	private Integer employeeId;
 
-	@Column(name = "type", insertable = false, updatable = false)
+	@Column(name = "t_type", insertable = false, updatable = false)
 	private String type;
 	
 	private String address;
@@ -75,10 +80,13 @@ public class Employee implements java.io.Serializable {
 
 	@OneToMany(fetch = FetchType.EAGER , targetEntity = WorkExperince.class, cascade = { CascadeType.ALL  })
 	@JoinColumn(name = "employee_id")
+	@LazyCollection(LazyCollectionOption.FALSE)
 	private List<WorkExperince> workExperinces;
 
 	@OneToMany(fetch = FetchType.EAGER, targetEntity = Qualification.class, cascade = { CascadeType.ALL })
 	@JoinColumn(name = "employee_id")
+	@LazyCollection(LazyCollectionOption.FALSE)
+	@Fetch(value = FetchMode.SUBSELECT)
 	private List<Qualification> qualifications;
 
 	public Employee() {

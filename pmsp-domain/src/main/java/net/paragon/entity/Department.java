@@ -16,12 +16,12 @@ import net.paragon.framework.entity.BizObjectBase;
 /**
  * @author ducbui
  */
-@Entity
+/*@Entity
 @Table
 public class Department extends BizObjectBase {
-	/**
+	*//**
 	 * 
-	 */
+	 *//*
 	private static final long serialVersionUID = 2428090921013713652L;
 
 	private String name;
@@ -45,3 +45,4 @@ public class Department extends BizObjectBase {
 		this.employees = employees;
 	}
 }
+*/
